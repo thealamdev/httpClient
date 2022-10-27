@@ -18,4 +18,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('post',[PostController::class, "index"])->name('post.index');
+Route::get('posts',[PostController::class, "index"])->name('post.index');
+Route::get('posts/{id}',[PostController::class, "view"])->name('post.view');
+Route::get('addpost',[PostController::class, "addpost"])->name('addpost');
+Route::get('updatepost/{id}',[PostController::class, "update"])->name('update.post');

@@ -15,6 +15,9 @@
        <h3>Post Title: {{ $single_response['title'] }}</h3>
        <h4>Post body: {{ $single_response['body'] }}</h4>
     @endforeach
+
+ 
+
 </body>
 </html>
  
