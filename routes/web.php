@@ -17,8 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-
+// create post page:
+Route::get('/create',[PostController::class,"create"])->name('create');
+//edit page route:
+Route::get('edit/{id}',[PostController::class,"edit"])->name('edit');
 Route::get('posts',[PostController::class, "index"])->name('post.index');
 Route::get('posts/{id}',[PostController::class, "view"])->name('post.view');
-Route::get('addpost',[PostController::class, "addpost"])->name('addpost');
+Route::post('addpost',[PostController::class, "addpost"])->name('addpost');
 Route::get('updatepost/{id}',[PostController::class, "update"])->name('update.post');

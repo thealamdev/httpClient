@@ -11,22 +11,24 @@
     <title>Form</title>
   </head>
   <body>
-   
+    @foreach ($response as $item)
+        {{ $response }}
+    @endforeach
  <div class="container">
     <div class="card m-auto mt-4" style="width: 22rem">
         <div class="card-body">
-            <form method="POST" action="{{ route('addpost') }}">
+            <form method="POST" action="">
                 @csrf
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Enter Name:</label>
-                  <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <label for="exampleInputEmail1" class="form-label">Enter Email:</label>
+                  <input type="email" name="email"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                    
                 </div>
                 <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Enter city</label>
-                  <input type="text" name="job" class="form-control" id="exampleInputPassword1">
+                  <label for="exampleInputPassword1" class="form-label">Enter First Name</label>
+                  <input type="text" name="first_name" class="form-control" id="exampleInputPassword1">
                 </div>
-                 
+                  
                 <button type="submit" name="submit" class="btn btn-primary">Submit</button>
               </form>
         </div>
