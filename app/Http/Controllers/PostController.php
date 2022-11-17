@@ -38,6 +38,7 @@ class PostController extends Controller
     // }
 
     // edit function:
+    // their is some special changes that is important:
     public function edit($id){
         
         $response = Http::get("https://visa.guideasy.com/api/v1/server-management/categories/". $id . "/edit")->collect('payload');
